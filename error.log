@@ -1,0 +1,43 @@
+{"level":"error","message":"Login failed: No element found for selector: #username","stack":"Error: No element found for selector: #username\n    at assert (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/util/assert.ts:19:11)\n    at CdpFrame.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/Frame.ts:1151:11)\n    at AuthService.login (/Users/paolo/work/newstuff/trainingpeaks/src/services/auth.service.ts:46:7)\n    at main (/Users/paolo/work/newstuff/trainingpeaks/src/index.ts:8:5)","timestamp":"2024-11-21T03:51:40.367Z"}
+{"level":"error","message":"Login failed: text is not iterable","stack":"TypeError: text is not iterable\n    at CdpKeyboard.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/cdp/Input.ts:182:24)\n    at CdpElementHandle.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/ElementHandle.ts:1087:38)\n    at CdpElementHandle.<anonymous> (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/ElementHandle.ts:139:20)\n    at CdpFrame.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/Frame.ts:1152:5)\n    at AuthService.login (/Users/paolo/work/newstuff/trainingpeaks/src/services/auth.service.ts:46:7)\n    at main (/Users/paolo/work/newstuff/trainingpeaks/src/index.ts:8:5)","timestamp":"2024-11-21T03:55:47.405Z"}
+{"level":"error","message":"Login failed: text is not iterable","stack":"TypeError: text is not iterable\n    at CdpKeyboard.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/cdp/Input.ts:182:24)\n    at CdpElementHandle.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/ElementHandle.ts:1087:38)\n    at CdpElementHandle.<anonymous> (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/ElementHandle.ts:139:20)\n    at CdpFrame.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/Frame.ts:1152:5)\n    at AuthService.login (/Users/paolo/work/newstuff/trainingpeaks/src/services/auth.service.ts:47:7)\n    at main (/Users/paolo/work/newstuff/trainingpeaks/src/index.ts:8:5)","timestamp":"2024-11-21T03:57:08.307Z"}
+{"level":"error","message":"Login failed: text is not iterable","stack":"TypeError: text is not iterable\n    at CdpKeyboard.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/cdp/Input.ts:182:24)\n    at CdpElementHandle.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/ElementHandle.ts:1087:38)\n    at CdpElementHandle.<anonymous> (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/ElementHandle.ts:139:20)\n    at CdpFrame.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/Frame.ts:1152:5)\n    at AuthService.login (/Users/paolo/work/newstuff/trainingpeaks/src/services/auth.service.ts:47:7)\n    at main (/Users/paolo/work/newstuff/trainingpeaks/src/index.ts:8:5)","timestamp":"2024-11-21T04:00:56.153Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:02:09.459Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:02:12.572Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:03:34.711Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:04:55.810Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:05:01.777Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:06:21.160Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:08:35.354Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:09:58.109Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:11:03.385Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:11:27.492Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:11:31.574Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:11:47.373Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:12:00.420Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:16:21.201Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:17:12.025Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T15:09:39.675Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T15:11:47.888Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T15:13:40.158Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T15:38:53.506Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T15:40:14.766Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T15:44:33.040Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T15:45:40.489Z"}
+{"level":"error","message":"Scheduled task failed:","timestamp":"2024-11-21T16:09:31.469Z"}
+{"level":"error","message":"Scheduled task failed: No user ID found","stack":"Error: No user ID found\n    at Scheduler.scheduleNextRun (/Users/paolo/work/newstuff/trainingpeaks/src/utils/scheduler.ts:40:15)\n    at Scheduler.startScheduler (/Users/paolo/work/newstuff/trainingpeaks/src/utils/scheduler.ts:21:10)\n    at main (/Users/paolo/work/newstuff/trainingpeaks/src/index.ts:16:15)","timestamp":"2024-11-21T16:10:20.731Z"}
+{"level":"error","message":"Scheduled task failed: Failed to get user ID after authentication","stack":"Error: Failed to get user ID after authentication\n    at Scheduler.scheduleNextRun (/Users/paolo/work/newstuff/trainingpeaks/src/utils/scheduler.ts:48:15)","timestamp":"2024-11-21T16:13:51.063Z"}
+{"level":"error","message":"Scheduled task failed: Failed to get user ID after authentication","stack":"Error: Failed to get user ID after authentication\n    at Scheduler.scheduleNextRun (/Users/paolo/work/newstuff/trainingpeaks/src/utils/scheduler.ts:48:15)","timestamp":"2024-11-21T16:15:01.774Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:21:43.814Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:25:36.909Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:29:36.143Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:30:45.349Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:31:50.940Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:34:22.020Z"}
+{"level":"error","message":"Scheduled task failed: Failed to fetch workouts","stack":"Error: Failed to fetch workouts\n    at TrainingPeaksService.getWorkouts (/Users/paolo/work/newstuff/trainingpeaks/src/services/trainingpeaks.service.ts:28:13)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at Scheduler.scheduleNextRun (/Users/paolo/work/newstuff/trainingpeaks/src/utils/scheduler.ts:57:24)","timestamp":"2024-11-21T16:35:54.517Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:41:44.317Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:41:57.242Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:42:27.954Z"}
+{"level":"error","message":"Scheduled task failed: Failed to fetch workouts","stack":"Error: Failed to fetch workouts\n    at TrainingPeaksService.getWorkouts (/Users/paolo/work/newstuff/trainingpeaks/src/services/trainingpeaks.service.ts:28:13)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at Scheduler.scheduleNextRun (/Users/paolo/work/newstuff/trainingpeaks/src/utils/scheduler.ts:57:24)","timestamp":"2024-11-21T16:44:19.628Z"}
+{"level":"error","message":"Scheduled task failed: Failed to fetch workouts","stack":"Error: Failed to fetch workouts\n    at TrainingPeaksService.getWorkouts (/Users/paolo/work/newstuff/trainingpeaks/src/services/trainingpeaks.service.ts:28:13)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at Scheduler.scheduleNextRun (/Users/paolo/work/newstuff/trainingpeaks/src/utils/scheduler.ts:57:24)","timestamp":"2024-11-21T16:45:18.859Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:49:29.893Z"}

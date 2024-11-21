@@ -1,0 +1,492 @@
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T03:51:38.070Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T03:51:40.344Z"}
+{"level":"error","message":"Login failed: No element found for selector: #username","stack":"Error: No element found for selector: #username\n    at assert (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/util/assert.ts:19:11)\n    at CdpFrame.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/Frame.ts:1151:11)\n    at AuthService.login (/Users/paolo/work/newstuff/trainingpeaks/src/services/auth.service.ts:46:7)\n    at main (/Users/paolo/work/newstuff/trainingpeaks/src/index.ts:8:5)","timestamp":"2024-11-21T03:51:40.367Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T03:55:44.334Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T03:55:47.363Z"}
+{"level":"error","message":"Login failed: text is not iterable","stack":"TypeError: text is not iterable\n    at CdpKeyboard.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/cdp/Input.ts:182:24)\n    at CdpElementHandle.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/ElementHandle.ts:1087:38)\n    at CdpElementHandle.<anonymous> (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/ElementHandle.ts:139:20)\n    at CdpFrame.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/Frame.ts:1152:5)\n    at AuthService.login (/Users/paolo/work/newstuff/trainingpeaks/src/services/auth.service.ts:46:7)\n    at main (/Users/paolo/work/newstuff/trainingpeaks/src/index.ts:8:5)","timestamp":"2024-11-21T03:55:47.405Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T03:57:01.694Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T03:57:05.834Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T03:57:08.261Z"}
+{"level":"error","message":"Login failed: text is not iterable","stack":"TypeError: text is not iterable\n    at CdpKeyboard.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/cdp/Input.ts:182:24)\n    at CdpElementHandle.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/ElementHandle.ts:1087:38)\n    at CdpElementHandle.<anonymous> (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/ElementHandle.ts:139:20)\n    at CdpFrame.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/Frame.ts:1152:5)\n    at AuthService.login (/Users/paolo/work/newstuff/trainingpeaks/src/services/auth.service.ts:47:7)\n    at main (/Users/paolo/work/newstuff/trainingpeaks/src/index.ts:8:5)","timestamp":"2024-11-21T03:57:08.307Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T04:00:53.285Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T04:00:56.105Z"}
+{"level":"error","message":"Login failed: text is not iterable","stack":"TypeError: text is not iterable\n    at CdpKeyboard.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/cdp/Input.ts:182:24)\n    at CdpElementHandle.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/ElementHandle.ts:1087:38)\n    at CdpElementHandle.<anonymous> (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/ElementHandle.ts:139:20)\n    at CdpFrame.type (/Users/paolo/work/newstuff/trainingpeaks/node_modules/puppeteer-core/src/api/Frame.ts:1152:5)\n    at AuthService.login (/Users/paolo/work/newstuff/trainingpeaks/src/services/auth.service.ts:47:7)\n    at main (/Users/paolo/work/newstuff/trainingpeaks/src/index.ts:8:5)","timestamp":"2024-11-21T04:00:56.153Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:02:09.459Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:02:12.572Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T04:03:32.493Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T04:03:34.707Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T04:03:34.707Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:03:34.711Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T04:04:53.559Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T04:04:55.809Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T04:04:55.810Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:04:55.810Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T04:05:00.885Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:05:01.777Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T04:05:57.144Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T04:05:59.687Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T04:05:59.691Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T04:05:59.691Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T04:05:59.734Z"}
+{"level":"info","message":"Waiting for auth token...","timestamp":"2024-11-21T04:06:11.142Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:06:21.160Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T04:08:23.009Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T04:08:25.270Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T04:08:25.271Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T04:08:25.271Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T04:08:25.329Z"}
+{"level":"info","message":"Waiting for auth token...","timestamp":"2024-11-21T04:08:25.339Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:08:35.354Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T04:09:45.452Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T04:09:47.988Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T04:09:48.060Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T04:09:48.060Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T04:09:48.061Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T04:09:48.080Z"}
+{"level":"info","message":"Waiting for auth token...","timestamp":"2024-11-21T04:09:48.088Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:09:58.109Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T04:10:51.160Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T04:10:53.470Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T04:10:53.537Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T04:10:53.537Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T04:10:53.537Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T04:10:53.558Z"}
+{"level":"info","message":"Waiting for auth token...","timestamp":"2024-11-21T04:10:53.565Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:11:03.385Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T04:11:15.110Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T04:11:17.362Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T04:11:17.456Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T04:11:17.457Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T04:11:17.457Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T04:11:17.476Z"}
+{"level":"info","message":"Waiting for auth token...","timestamp":"2024-11-21T04:11:17.477Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:11:27.492Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T04:11:28.219Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T04:11:30.494Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T04:11:30.540Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T04:11:30.540Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T04:11:30.540Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T04:11:30.559Z"}
+{"level":"info","message":"Waiting for auth token...","timestamp":"2024-11-21T04:11:30.559Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:11:31.574Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T04:11:43.980Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T04:11:46.187Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T04:11:46.304Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T04:11:46.304Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T04:11:46.304Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T04:11:46.325Z"}
+{"level":"info","message":"Waiting for auth token...","timestamp":"2024-11-21T04:11:46.325Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:11:47.373Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T04:11:57.053Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T04:11:59.328Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T04:11:59.373Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T04:11:59.374Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T04:11:59.374Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T04:11:59.395Z"}
+{"level":"info","message":"Waiting for auth token...","timestamp":"2024-11-21T04:11:59.396Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:12:00.420Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T04:15:48.007Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T04:15:50.324Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T04:15:50.428Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T04:15:50.428Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T04:15:50.428Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T04:15:50.444Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:16:21.201Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T04:16:56.399Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T04:16:58.567Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T04:16:58.793Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T04:16:58.794Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T04:16:58.794Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T04:16:58.813Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T04:17:12.025Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T15:09:23.876Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T15:09:27.071Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T15:09:27.153Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T15:09:27.153Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T15:09:27.153Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T15:09:27.174Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T15:09:39.675Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T15:11:38.656Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T15:11:41.254Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T15:11:41.308Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T15:11:41.308Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T15:11:41.308Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T15:11:41.325Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T15:11:47.888Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T15:13:35.602Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T15:13:37.934Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T15:13:38.159Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T15:13:38.159Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T15:13:38.159Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T15:13:38.179Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T15:13:40.158Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T15:38:48.993Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T15:38:51.350Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T15:38:51.402Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T15:38:51.403Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T15:38:51.403Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T15:38:51.426Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T15:38:53.506Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T15:39:38.472Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T15:39:40.961Z"}
+{"level":"info","message":"Username:","timestamp":"2024-11-21T15:39:41.027Z"}
+{"level":"info","message":"Password:","timestamp":"2024-11-21T15:39:41.028Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T15:39:41.028Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T15:39:41.048Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T15:40:14.766Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T15:44:20.935Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T15:44:23.361Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T15:44:23.417Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T15:44:23.437Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T15:44:33.040Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T15:45:25.489Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T15:45:28.050Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T15:45:28.153Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T15:45:28.170Z"}
+{"level":"info","message":"Waiting for auth token...","timestamp":"2024-11-21T15:45:37.765Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T15:45:40.489Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T15:56:20.193Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T15:56:22.396Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T15:56:22.623Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T15:56:22.642Z"}
+{"level":"info","message":"Waiting for auth token...","timestamp":"2024-11-21T15:56:32.241Z"}
+{"level":"info","message":"Successfully authenticated with TrainingPeaks","timestamp":"2024-11-21T15:56:32.241Z"}
+{"level":"info","message":"Starting scheduler...","timestamp":"2024-11-21T15:56:32.321Z"}
+{"level":"info","message":"Running scheduled task...","timestamp":"2024-11-21T15:56:32.321Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T16:08:59.232Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:09:01.749Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:09:01.825Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:09:01.844Z"}
+{"level":"info","message":"Waiting for auth token and user info...","timestamp":"2024-11-21T16:09:31.374Z"}
+{"level":"info","message":"Successfully authenticated with TrainingPeaks","timestamp":"2024-11-21T16:09:31.375Z"}
+{"level":"info","message":"Starting scheduler...","timestamp":"2024-11-21T16:09:31.468Z"}
+{"level":"info","message":"Running scheduled task...","timestamp":"2024-11-21T16:09:31.468Z"}
+{"level":"error","message":"Scheduled task failed:","timestamp":"2024-11-21T16:09:31.469Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T16:10:07.746Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:10:10.415Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:10:10.494Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:10:10.514Z"}
+{"level":"info","message":"Waiting for auth token and user info...","timestamp":"2024-11-21T16:10:20.648Z"}
+{"level":"info","message":"Successfully authenticated with TrainingPeaks","timestamp":"2024-11-21T16:10:20.650Z"}
+{"level":"info","message":"Starting scheduler...","timestamp":"2024-11-21T16:10:20.730Z"}
+{"level":"info","message":"Running scheduled task...","timestamp":"2024-11-21T16:10:20.731Z"}
+{"level":"error","message":"Scheduled task failed: No user ID found","stack":"Error: No user ID found\n    at Scheduler.scheduleNextRun (/Users/paolo/work/newstuff/trainingpeaks/src/utils/scheduler.ts:40:15)\n    at Scheduler.startScheduler (/Users/paolo/work/newstuff/trainingpeaks/src/utils/scheduler.ts:21:10)\n    at main (/Users/paolo/work/newstuff/trainingpeaks/src/index.ts:16:15)","timestamp":"2024-11-21T16:10:20.731Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T16:13:26.347Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:13:28.717Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:13:28.775Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:13:28.792Z"}
+{"level":"info","message":"Waiting for auth token and user info...","timestamp":"2024-11-21T16:13:38.525Z"}
+{"level":"info","message":"Successfully authenticated with TrainingPeaks","timestamp":"2024-11-21T16:13:38.526Z"}
+{"level":"info","message":"Starting scheduler...","timestamp":"2024-11-21T16:13:38.611Z"}
+{"level":"info","message":"Running scheduled task...","timestamp":"2024-11-21T16:13:38.612Z"}
+{"level":"info","message":"Authentication token invalid or expired, attempting to login...","timestamp":"2024-11-21T16:13:38.612Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T16:13:39.043Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:13:41.370Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:13:41.407Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:13:41.424Z"}
+{"level":"info","message":"Waiting for auth token and user info...","timestamp":"2024-11-21T16:13:50.973Z"}
+{"level":"info","message":"Successfully authenticated with TrainingPeaks","timestamp":"2024-11-21T16:13:50.980Z"}
+{"level":"error","message":"Scheduled task failed: Failed to get user ID after authentication","stack":"Error: Failed to get user ID after authentication\n    at Scheduler.scheduleNextRun (/Users/paolo/work/newstuff/trainingpeaks/src/utils/scheduler.ts:48:15)","timestamp":"2024-11-21T16:13:51.063Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T16:14:35.809Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:14:38.275Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:14:38.504Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:14:38.522Z"}
+{"level":"info","message":"Waiting for auth token and user info...","timestamp":"2024-11-21T16:14:48.377Z"}
+{"level":"info","message":"Successfully authenticated with TrainingPeaks","timestamp":"2024-11-21T16:14:48.378Z"}
+{"level":"info","message":"Starting scheduler...","timestamp":"2024-11-21T16:14:48.450Z"}
+{"level":"info","message":"Running scheduled task...","timestamp":"2024-11-21T16:14:48.450Z"}
+{"level":"info","message":"Authentication token invalid or expired, attempting to login...","timestamp":"2024-11-21T16:14:48.450Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T16:14:48.857Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:14:51.112Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:14:51.337Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:14:51.357Z"}
+{"level":"info","message":"Waiting for auth token and user info...","timestamp":"2024-11-21T16:15:01.681Z"}
+{"level":"info","message":"Successfully authenticated with TrainingPeaks","timestamp":"2024-11-21T16:15:01.682Z"}
+{"level":"error","message":"Scheduled task failed: Failed to get user ID after authentication","stack":"Error: Failed to get user ID after authentication\n    at Scheduler.scheduleNextRun (/Users/paolo/work/newstuff/trainingpeaks/src/utils/scheduler.ts:48:15)","timestamp":"2024-11-21T16:15:01.774Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T16:21:21.770Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:21:24.203Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:21:24.262Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:21:24.284Z"}
+{"level":"info","message":"Waiting for auth token and user info...","timestamp":"2024-11-21T16:21:33.810Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:21:43.814Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T16:25:25.235Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:25:27.454Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:25:27.564Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:25:27.581Z"}
+{"level":"info","message":"Successfully retrieved auth token","timestamp":"2024-11-21T16:25:29.759Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:25:36.909Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T16:29:23.820Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:29:26.349Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:29:26.453Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:29:26.472Z"}
+{"level":"info","message":"Successfully retrieved auth token","timestamp":"2024-11-21T16:29:29.000Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:29:36.143Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T16:30:32.860Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:30:35.181Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:30:35.393Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:30:35.411Z"}
+{"level":"info","message":"Successfully retrieved auth token","timestamp":"2024-11-21T16:30:38.124Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:30:45.349Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T16:31:38.700Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:31:41.184Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:31:41.292Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:31:41.309Z"}
+{"level":"info","message":"Successfully retrieved auth token","timestamp":"2024-11-21T16:31:43.998Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:31:50.940Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T16:34:09.697Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:34:12.319Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:34:12.362Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:34:12.380Z"}
+{"level":"info","message":"Successfully retrieved auth token","timestamp":"2024-11-21T16:34:15.045Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:34:22.020Z"}
+{"level":"info","message":"Navigating to TrainingPeaks login page...","timestamp":"2024-11-21T16:35:41.621Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:35:44.314Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:35:44.397Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:35:44.414Z"}
+{"level":"info","message":"Successfully retrieved auth token","timestamp":"2024-11-21T16:35:46.985Z"}
+{"level":"info","message":"Successfully retrieved user ID","timestamp":"2024-11-21T16:35:47.365Z"}
+{"level":"info","message":"Starting scheduler...","timestamp":"2024-11-21T16:35:54.032Z"}
+{"level":"info","message":"Running scheduled task...","timestamp":"2024-11-21T16:35:54.032Z"}
+{"level":"error","message":"Scheduled task failed: Failed to fetch workouts","stack":"Error: Failed to fetch workouts\n    at TrainingPeaksService.getWorkouts (/Users/paolo/work/newstuff/trainingpeaks/src/services/trainingpeaks.service.ts:28:13)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at Scheduler.scheduleNextRun (/Users/paolo/work/newstuff/trainingpeaks/src/utils/scheduler.ts:57:24)","timestamp":"2024-11-21T16:35:54.517Z"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:30.733Z","url":"https://home.trainingpeaks.com/login"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:30.814Z","url":"https://tp-front-end.trainingpeaks.com/pattern-library/v4.16.0/js/stencil/pattern-library/pattern-library.esm.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:30.830Z","url":"https://home.trainingpeaks.com/assets/icons/check-green.svg"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:30.830Z","url":"https://home.trainingpeaks.com/Scripts/CMSCustom/unsupportedBrowserWarning.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:30.831Z","url":"https://home.trainingpeaks.com/Scripts/formUtils.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:30.831Z","url":"https://assets.trainingpeaks.com/js/common-3.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:30.832Z","url":"https://home.trainingpeaks.com/Styles/marketingWebsite.css"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:30.832Z","url":"https://home.trainingpeaks.com/Scripts/CMSCustom/analytics.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:30.832Z","url":"https://home.trainingpeaks.com/Styles/inputStyles.css"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:30.839Z","url":"https://www.google.com/recaptcha/api.js?render=6LdCI94UAAAAAO5P5IEAytamTFyvC1azABMZWjlA"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:30.886Z","url":"https://tp-front-end.trainingpeaks.com/pattern-library/v4.16.0/css/pattern-library-common.css"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:30.914Z","url":"https://home.trainingpeaks.com/bundles/responsiveformlayoutstyles?v=l0GLoesFTLceTeOYqI5ls789AbFSV2g-rwRVxlAU9sc1"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:30.915Z","url":"https://home.trainingpeaks.com/Scripts/CMSCustom/jquery.focus.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.172Z","url":"https://home.trainingpeaks.com/bundles/responsiveformlayoutscripts?v=iVMQxRu0NOP-ZZFuhz6O12H3RimKVP2SsjC5HCA-3Jo1"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.178Z","url":"https://home.trainingpeaks.com/bundles/vendor/layoutheadscripts?v=D__ujzQE-13wWVNMjxCfSvOl6wH_4QDTjBQW7ZU9nLE1"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.221Z","url":"https://tp-front-end.trainingpeaks.com/pattern-library/v4.16.0/js/stencil/pattern-library/index-610e2697.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.244Z","url":"https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.254Z","url":"https://assets.trainingpeaks.com/fonts/helvetica-neue-55-roman.woff2"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.257Z","url":"https://assets.trainingpeaks.com/fonts/helvetica-neue-75-bold.woff2"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.287Z","url":"https://cdn.segment.com/analytics.js/v1/eWSxeD3ITOpF0xvFEIcWrFJSUFyZEltI/analytics.min.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.301Z","url":"https://assets.trainingpeaks.com/images/authentication-backgrounds/003-2048.jpg"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.326Z","url":"https://www.googletagmanager.com/gtag/js?id=G-Z2LEWBWKBD"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.327Z","url":"https://www.googletagmanager.com/gtm.js?id=GTM-M23TJ7T"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.330Z","url":"https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/2.7.1/rollbar.min.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.382Z","url":"https://www.gstatic.com/recaptcha/releases/-ZG7BC9TxCVEbzIO2m429usb/recaptcha__en.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.398Z","url":"https://cdn.segment.com/analytics-next/bundles/ajs-destination.bundle.ed53a26b6edc80c65d73.js"}
+{"error":{"name":"Error"},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.416Z","url":"https://analytics.google.com/g/collect?v=2&tid=G-Z2LEWBWKBD&gtm=45je4bk0v870547216za200&_p=1732207111175&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&tag_exp=101925629~102067555~102067808~102077855~102081485&cid=295563419.1732207111&ecid=1289760625&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=Chromium%3B131.0.6778.33%7CNot_A%2520Brand%3B24.0.0.0&uamb=0&uam=&uap=macOS&uapv=14.5.0&uaw=0&are=1&pae=1&frm=0&pscdl=noapi&_s=1&sid=1732207111&sct=1&seg=0&dl=https%3A%2F%2Fhome.trainingpeaks.com%2Flogin&dt=Login%20%7C%20TrainingPeaks&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=926"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.428Z","url":"https://cdn.segment.com/analytics-next/bundles/schemaFilter.bundle.5c2661f67b4b71a6d9bd.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.481Z","url":"https://cdn.segment.com/next-integrations/actions/google-analytics-4-web/51855e573177634029a6.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.482Z","url":"https://stats.g.doubleclick.net/g/collect?v=2&tid=G-Z2LEWBWKBD&cid=295563419.1732207111&gtm=45je4bk0v870547216za200&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=101925629~102067555~102067808~102077855~102081485"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.510Z","url":"https://cdn.segment.com/next-integrations/actions/845/449cd4534726259c2a8c.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.537Z","url":"https://cdn.segment.com/next-integrations/integrations/facebook-pixel/2.11.5/facebook-pixel.dynamic.js.gz"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.537Z","url":"https://cdn.segment.com/next-integrations/integrations/hotjar/1.4.0/hotjar.dynamic.js.gz"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.538Z","url":"https://cdn.segment.com/next-integrations/integrations/visual-tagger/0.3.5/visual-tagger.dynamic.js.gz"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.574Z","url":"https://cdn.segment.com/next-integrations/integrations/vendor/commons.a61d7bea37d2de5d4b69.js.gz"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.649Z","url":"https://cdn.cookielaw.org/scripttemplates/202308.1.0/otBannerSdk.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.667Z","url":"https://static.hotjar.com/c/hotjar-2239749.js?sv=6"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.728Z","url":"https://connect.facebook.net/en_US/fbevents.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.743Z","url":"https://cdn.cookielaw.org/scripttemplates/202308.1.0/assets/otCommonStyles.css"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.799Z","url":"https://script.hotjar.com/modules.86621fa4aeada5bcf025.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.799Z","url":"https://cdn.cookielaw.org/logos/static/ot_close.svg"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.800Z","url":"https://cdn.cookielaw.org/logos/static/ot_guard_logo.svg"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.800Z","url":"https://cdn.cookielaw.org/logos/static/powered_by_logo.svg"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.804Z","url":"https://cdn.cookielaw.org/logos/71271544-afc6-4440-b3f4-c943f2a870d5/d4aa7fbb-b2d8-4f13-8d32-1eb989bca4b8/56d66d12-1b7c-4d67-a457-f3c0db6b3277/TrainingPeaks_Logoblk.png"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.808Z","url":"https://td.doubleclick.net/td/ga/rul?tid=G-Z2LEWBWKBD&gacid=295563419.1732207111&gtm=45je4bk0v870547216za200&dma=0&gcd=13l3l3l3l1l1&npa=0&pscdl=noapi&aip=1&fledge=1&frm=0&tag_exp=101925629~102067555~102067808~102077855~102081485&z=1748036017"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.814Z","url":"https://www.gstatic.com/recaptcha/releases/-ZG7BC9TxCVEbzIO2m429usb/styles__ltr.css"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.835Z","url":"https://www.gstatic.com/recaptcha/releases/-ZG7BC9TxCVEbzIO2m429usb/recaptcha__en.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.836Z","url":"https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdCI94UAAAAAO5P5IEAytamTFyvC1azABMZWjlA&co=aHR0cHM6Ly9ob21lLnRyYWluaW5ncGVha3MuY29tOjQ0Mw..&hl=en&v=-ZG7BC9TxCVEbzIO2m429usb&size=invisible&cb=tyaxekvuy38r"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.849Z","url":"https://www.gstatic.com/recaptcha/api2/logo_48.png"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.867Z","url":"https://www.google.com/js/bg/hdp6NVToxcZ-RDmfj-FiLxITMNF3FSB01e-_24RN2ow.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.883Z","url":"https://www.google.com/recaptcha/api2/webworker.js?hl=en&v=-ZG7BC9TxCVEbzIO2m429usb"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.891Z","url":"https://connect.facebook.net/signals/config/1990193267872830?v=2.9.176&r=stable&domain=home.trainingpeaks.com&hme=872f04a0547459b3285cb03b0d7a47bfde40628f4b386809918a621e2688602f&ex_m=70%2C121%2C107%2C111%2C61%2C4%2C100%2C69%2C16%2C97%2C89%2C51%2C54%2C172%2C175%2C187%2C183%2C184%2C186%2C29%2C101%2C53%2C77%2C185%2C167%2C170%2C180%2C181%2C188%2C131%2C41%2C189%2C190%2C34%2C143%2C15%2C50%2C195%2C194%2C133%2C18%2C40%2C1%2C43%2C65%2C66%2C67%2C71%2C93%2C17%2C14%2C96%2C92%2C91%2C108%2C52%2C110%2C39%2C109%2C30%2C94%2C26%2C168%2C171%2C140%2C86%2C56%2C84%2C33%2C73%2C0%2C95%2C32%2C28%2C82%2C83%2C88%2C47%2C46%2C87%2C37%2C11%2C12%2C13%2C6%2C7%2C25%2C22%2C23%2C57%2C62%2C64%2C75%2C102%2C27%2C76%2C9%2C8%2C80%2C48%2C21%2C104%2C103%2C105%2C98%2C10%2C20%2C3%2C38%2C74%2C19%2C5%2C90%2C81%2C44%2C35%2C85%2C2%2C36%2C63%2C42%2C106%2C45%2C79%2C68%2C112%2C60%2C59%2C31%2C99%2C58%2C55%2C49%2C78%2C72%2C24%2C113"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.908Z","url":"https://www.gstatic.com/recaptcha/releases/-ZG7BC9TxCVEbzIO2m429usb/recaptcha__en.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.914Z","url":"https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.914Z","url":"https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:31.954Z","url":"https://www.facebook.com/tr/?id=1990193267872830&ev=PageView&dl=https%3A%2F%2Fhome.trainingpeaks.com%2Flogin&rl=&if=false&ts=1732207111889&sw=1280&sh=720&ud[external_id]=a9cf8426d8f9dd074bf1c8e146311d20709d86a1d67a92fde96ee919af636b4b&v=2.9.176&r=stable&a=seg&ec=0&o=4126&fbp=fb.1.1732207111888.907518561809665713&cs_est=true&ler=empty&cdl=API_unavailable&it=1732207111725&coo=false&dpo=LDU&dpoco=0&dpost=0&eid=ajs-next-1732207111522-774cce39-fa8f-4b8f-ba0c-c9954a303e2a&rqm=GET"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:32.076Z","url":"https://www.facebook.com/privacy_sandbox/pixel/register/trigger/?id=1990193267872830&ev=PageView&dl=https%3A%2F%2Fhome.trainingpeaks.com%2Flogin&rl=&if=false&ts=1732207111889&sw=1280&sh=720&ud[external_id]=a9cf8426d8f9dd074bf1c8e146311d20709d86a1d67a92fde96ee919af636b4b&v=2.9.176&r=stable&a=seg&ec=0&o=4126&fbp=fb.1.1732207111888.907518561809665713&cs_est=true&ler=empty&cdl=API_unavailable&it=1732207111725&coo=false&dpo=LDU&dpoco=0&dpost=0&eid=ajs-next-1732207111522-774cce39-fa8f-4b8f-ba0c-c9954a303e2a&rqm=FGET"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:32.182Z","url":"https://www.google.com/recaptcha/api2/reload?k=6LdCI94UAAAAAO5P5IEAytamTFyvC1azABMZWjlA"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:32.226Z","url":"https://www.google.com/recaptcha/api2/clr?k=6LdCI94UAAAAAO5P5IEAytamTFyvC1azABMZWjlA"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:32.816Z","url":"https://www.facebook.com/tr/?id=1990193267872830&ev=SubscribedButtonClick&dl=https%3A%2F%2Fhome.trainingpeaks.com%2Flogin&rl=&if=false&ts=1732207112793&cd[buttonFeatures]=%7B%22classList%22%3A%22%22%2C%22destination%22%3A%22%22%2C%22id%22%3A%22onetrust-accept-btn-handler%22%2C%22imageUrl%22%3A%22%22%2C%22innerText%22%3A%22Accept%20Cookies%22%2C%22numChildButtons%22%3A0%2C%22tag%22%3A%22button%22%2C%22type%22%3Anull%2C%22name%22%3A%22%22%2C%22value%22%3A%22%22%7D&cd[buttonText]=Accept%20Cookies&cd[formFeatures]=%5B%5D&cd[pageFeatures]=%7B%22title%22%3A%22Login%20%7C%20TrainingPeaks%22%7D&cd[parameters]=%5B%5D&sw=1280&sh=720&ud[external_id]=a9cf8426d8f9dd074bf1c8e146311d20709d86a1d67a92fde96ee919af636b4b&v=2.9.176&r=stable&a=seg&ec=1&o=4126&fbp=fb.1.1732207111888.907518561809665713&cs_est=true&ler=empty&cdl=API_unavailable&it=1732207111725&coo=false&dpo=LDU&dpoco=0&dpost=0&es=automatic&tm=3&rqm=GET"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:32.908Z","url":"https://www.facebook.com/privacy_sandbox/pixel/register/trigger/?id=1990193267872830&ev=SubscribedButtonClick&dl=https%3A%2F%2Fhome.trainingpeaks.com%2Flogin&rl=&if=false&ts=1732207112793&cd[buttonFeatures]=%7B%22classList%22%3A%22%22%2C%22destination%22%3A%22%22%2C%22id%22%3A%22onetrust-accept-btn-handler%22%2C%22imageUrl%22%3A%22%22%2C%22innerText%22%3A%22Accept%20Cookies%22%2C%22numChildButtons%22%3A0%2C%22tag%22%3A%22button%22%2C%22type%22%3Anull%2C%22name%22%3A%22%22%2C%22value%22%3A%22%22%7D&cd[buttonText]=Accept%20Cookies&cd[formFeatures]=%5B%5D&cd[pageFeatures]=%7B%22title%22%3A%22Login%20%7C%20TrainingPeaks%22%7D&cd[parameters]=%5B%5D&sw=1280&sh=720&ud[external_id]=a9cf8426d8f9dd074bf1c8e146311d20709d86a1d67a92fde96ee919af636b4b&v=2.9.176&r=stable&a=seg&ec=1&o=4126&fbp=fb.1.1732207111888.907518561809665713&cs_est=true&ler=empty&cdl=API_unavailable&it=1732207111725&coo=false&dpo=LDU&dpoco=0&dpost=0&es=automatic&tm=3&rqm=FGET"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.270Z","url":"https://www.google.com/recaptcha/api2/bcn?k=6LdCI94UAAAAAO5P5IEAytamTFyvC1azABMZWjlA"}
+{"error":{"name":"Error"},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.326Z","url":"https://www.facebook.com/tr/?id=1990193267872830&ev=SubscribedButtonClick&dl=https%3A%2F%2Fhome.trainingpeaks.com%2Flogin&rl=&if=false&ts=1732207113679&cd[buttonFeatures]=%7B%22classList%22%3A%22small-12%20mb-0%20u-mt-2%20u-text-white%20u-bg-blue-500%22%2C%22destination%22%3A%22https%3A%2F%2Fhome.trainingpeaks.com%2Flogin%22%2C%22id%22%3A%22btnSubmit%22%2C%22imageUrl%22%3A%22%22%2C%22innerText%22%3A%22Login%22%2C%22numChildButtons%22%3A0%2C%22tag%22%3A%22button%22%2C%22type%22%3A%22submit%22%2C%22name%22%3A%22submit%22%2C%22value%22%3A%22%22%7D&cd[buttonText]=Login&cd[formFeatures]=%5B%7B%22id%22%3A%22%22%2C%22name%22%3A%22__RequestVerificationToken%22%2C%22tag%22%3A%22input%22%2C%22inputType%22%3A%22hidden%22%7D%2C%7B%22id%22%3A%22%22%2C%22name%22%3A%22CaptchaHidden%22%2C%22tag%22%3A%22input%22%2C%22inputType%22%3A%22hidden%22%7D%2C%7B%22id%22%3A%22captcha-token%22%2C%22name%22%3A%22CaptchaToken%22%2C%22tag%22%3A%22input%22%2C%22inputType%22%3A%22hidden%22%7D%2C%7B%22id%22%3A%22Attempts%22%2C%22name%22%3A%22Attempts%22%2C%22tag%22%3A%22input%22%2C%22inputType%22%3A%22hidden%22%2C%22valueMeaning%22%3A%22empty%22%7D%2C%7B%22id%22%3A%22Username%22%2C%22name%22%3A%22Username%22%2C%22tag%22%3A%22input%22%2C%22placeholder%22%3A%22Username%22%2C%22inputType%22%3A%22text%22%7D%2C%7B%22id%22%3A%22Password%22%2C%22name%22%3A%22Password%22%2C%22tag%22%3A%22input%22%2C%22placeholder%22%3A%22Password%22%2C%22inputType%22%3A%22password%22%7D%5D&cd[pageFeatures]=%7B%22title%22%3A%22Login%20%7C%20TrainingPeaks%22%7D&cd[parameters]=%5B%5D&sw=1280&sh=720&ud[external_id]=a9cf8426d8f9dd074bf1c8e146311d20709d86a1d67a92fde96ee919af636b4b&v=2.9.176&r=stable&a=seg&ec=2&o=4126&fbp=fb.1.1732207111888.907518561809665713&cs_est=true&ler=empty&cdl=API_unavailable&it=1732207111725&coo=false&dpo=LDU&dpoco=0&dpost=0&es=automatic&tm=3&rqm=GET"}
+{"error":{"name":"Error"},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.326Z","url":"https://www.facebook.com/privacy_sandbox/pixel/register/trigger/?id=1990193267872830&ev=SubscribedButtonClick&dl=https%3A%2F%2Fhome.trainingpeaks.com%2Flogin&rl=&if=false&ts=1732207113679&cd[buttonFeatures]=%7B%22classList%22%3A%22small-12%20mb-0%20u-mt-2%20u-text-white%20u-bg-blue-500%22%2C%22destination%22%3A%22https%3A%2F%2Fhome.trainingpeaks.com%2Flogin%22%2C%22id%22%3A%22btnSubmit%22%2C%22imageUrl%22%3A%22%22%2C%22innerText%22%3A%22Login%22%2C%22numChildButtons%22%3A0%2C%22tag%22%3A%22button%22%2C%22type%22%3A%22submit%22%2C%22name%22%3A%22submit%22%2C%22value%22%3A%22%22%7D&cd[buttonText]=Login&cd[formFeatures]=%5B%7B%22id%22%3A%22%22%2C%22name%22%3A%22__RequestVerificationToken%22%2C%22tag%22%3A%22input%22%2C%22inputType%22%3A%22hidden%22%7D%2C%7B%22id%22%3A%22%22%2C%22name%22%3A%22CaptchaHidden%22%2C%22tag%22%3A%22input%22%2C%22inputType%22%3A%22hidden%22%7D%2C%7B%22id%22%3A%22captcha-token%22%2C%22name%22%3A%22CaptchaToken%22%2C%22tag%22%3A%22input%22%2C%22inputType%22%3A%22hidden%22%7D%2C%7B%22id%22%3A%22Attempts%22%2C%22name%22%3A%22Attempts%22%2C%22tag%22%3A%22input%22%2C%22inputType%22%3A%22hidden%22%2C%22valueMeaning%22%3A%22empty%22%7D%2C%7B%22id%22%3A%22Username%22%2C%22name%22%3A%22Username%22%2C%22tag%22%3A%22input%22%2C%22placeholder%22%3A%22Username%22%2C%22inputType%22%3A%22text%22%7D%2C%7B%22id%22%3A%22Password%22%2C%22name%22%3A%22Password%22%2C%22tag%22%3A%22input%22%2C%22placeholder%22%3A%22Password%22%2C%22inputType%22%3A%22password%22%7D%5D&cd[pageFeatures]=%7B%22title%22%3A%22Login%20%7C%20TrainingPeaks%22%7D&cd[parameters]=%5B%5D&sw=1280&sh=720&ud[external_id]=a9cf8426d8f9dd074bf1c8e146311d20709d86a1d67a92fde96ee919af636b4b&v=2.9.176&r=stable&a=seg&ec=2&o=4126&fbp=fb.1.1732207111888.907518561809665713&cs_est=true&ler=empty&cdl=API_unavailable&it=1732207111725&coo=false&dpo=LDU&dpoco=0&dpost=0&es=automatic&tm=3&rqm=FGET"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.331Z","url":"https://app.trainingpeaks.com/"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.411Z","url":"https://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.441Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-8b4a720d.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.442Z","url":"https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.446Z","url":"https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.543Z","url":"https://cdn.jsdelivr.net/npm/@eppo/js-client-sdk@3.5.0/dist/eppo-sdk.min.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.623Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/unsupportedBrowserWarning.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.653Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-43ac64cc.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.663Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-4e889123.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.676Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-1a25c13e.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.678Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/compiledScss/webfonts.css"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.680Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-04075ada.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.786Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/compiledScss/app.css"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.786Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/compiledScss/athleteGoalsEditor.css"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.786Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/vendor/mapbox/mapbox.css"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.787Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/main.css"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.787Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/tp-web-components.css"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.787Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-73486b5c.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.787Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/environment.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.788Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/main.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.790Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-0457282d.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.791Z","url":"https://app.trainingpeaks.com/polyfills/babel-polyfill.min.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.796Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-1fa9a10c.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.796Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-23bb80da.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.797Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-25eed4ca.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.798Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-283fb18b.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.799Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-2f4a2d45.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.799Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-2fd455b5.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.799Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-31743c5a.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.801Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-34726010.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.801Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-434a8632.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.801Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-48a0e43f.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.803Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-4fd2ca0b.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.803Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-5dcf2b79.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.803Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-587bee12.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.805Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-6107ac1a.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.807Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-61beaac1.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.807Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-667265bc.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.813Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-64b044b5.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.816Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-6ddaaa87.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.819Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-679db965.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.830Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-79c78f06.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.830Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-833e4fa2.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.831Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-90cc99ba.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:34.832Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-911378c0.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.089Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-997409f5.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.090Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-c0936b98.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.091Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-ab476c67.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.092Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-a1f560f8.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.092Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-c3abc0e7.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.092Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-c2064d3d.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.093Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-c8a494db.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.094Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-cf2c5a92.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.096Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-e6357a43.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.098Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-c4b20904.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.100Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-c9f59502.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.101Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-eed2757e.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.101Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-ec3328c5.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.102Z","url":"https://fast.fonts.com/t/1.css?apiType=css&projectid=444b1e2c-23c4-43ca-8978-58740876bc10"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.103Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-ef5eeb79.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.104Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-f6a63eaa.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.119Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-f4af5a70.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.136Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/modules-19295cb1.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.138Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/tp-web-components.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.149Z","url":"https://cdn.rollbar.com/rollbarjs/refs/tags/v2.26.4/rollbar.min.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.149Z","url":"https://cdn.segment.com/analytics.js/v1/eWSxeD3ITOpF0xvFEIcWrFJSUFyZEltI/analytics.min.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.154Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/compiledScss/print.css"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.155Z","url":"https://cdn.segment.com/analytics-next/bundles/ajs-destination.bundle.ed53a26b6edc80c65d73.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.155Z","url":"https://cdn.segment.com/analytics-next/bundles/schemaFilter.bundle.5c2661f67b4b71a6d9bd.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.173Z","url":"https://cdn.segment.com/next-integrations/actions/google-analytics-4-web/51855e573177634029a6.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.175Z","url":"https://cdn.segment.com/next-integrations/actions/845/449cd4534726259c2a8c.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.175Z","url":"https://cdn.segment.com/next-integrations/integrations/facebook-pixel/2.11.5/facebook-pixel.dynamic.js.gz"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.179Z","url":"https://cdn.segment.com/next-integrations/integrations/hotjar/1.4.0/hotjar.dynamic.js.gz"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.180Z","url":"https://cdn.segment.com/next-integrations/integrations/visual-tagger/0.3.5/visual-tagger.dynamic.js.gz"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.180Z","url":"https://cdn.segment.com/next-integrations/integrations/vendor/commons.a61d7bea37d2de5d4b69.js.gz"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.181Z","url":"https://static.hotjar.com/c/hotjar-2239749.js?sv=6"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.192Z","url":"https://www.googletagmanager.com/gtag/js?id=G-Z2LEWBWKBD"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.206Z","url":"https://connect.facebook.net/en_US/fbevents.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.208Z","url":"https://script.hotjar.com/modules.86621fa4aeada5bcf025.js"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.208Z","url":"https://www.facebook.com/impression.php/f199d7f42c58a74/?api_key=103295416394750&lid=115&payload=%7B%22source%22%3A%22jssdk%22%7D"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.230Z","url":"https://connect.facebook.net/signals/config/1990193267872830?v=2.9.176&r=stable&domain=app.trainingpeaks.com&hme=872f04a0547459b3285cb03b0d7a47bfde40628f4b386809918a621e2688602f&ex_m=70%2C121%2C107%2C111%2C61%2C4%2C100%2C69%2C16%2C97%2C89%2C51%2C54%2C172%2C175%2C187%2C183%2C184%2C186%2C29%2C101%2C53%2C77%2C185%2C167%2C170%2C180%2C181%2C188%2C131%2C41%2C189%2C190%2C34%2C143%2C15%2C50%2C195%2C194%2C133%2C18%2C40%2C1%2C43%2C65%2C66%2C67%2C71%2C93%2C17%2C14%2C96%2C92%2C91%2C108%2C52%2C110%2C39%2C109%2C30%2C94%2C26%2C168%2C171%2C140%2C86%2C56%2C84%2C33%2C73%2C0%2C95%2C32%2C28%2C82%2C83%2C88%2C47%2C46%2C87%2C37%2C11%2C12%2C13%2C6%2C7%2C25%2C22%2C23%2C57%2C62%2C64%2C75%2C102%2C27%2C76%2C9%2C8%2C80%2C48%2C21%2C104%2C103%2C105%2C98%2C10%2C20%2C3%2C38%2C74%2C19%2C5%2C90%2C81%2C44%2C35%2C85%2C2%2C36%2C63%2C42%2C106%2C45%2C79%2C68%2C112%2C60%2C59%2C31%2C99%2C58%2C55%2C49%2C78%2C72%2C24%2C113"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.279Z","url":"https://app.trainingpeaks.com/release-20241121-ccc5878/font-files/bcf54343-d033-41ee-bbd7-2b77df3fe7ba.woff"}
+{"error":{},"level":"warn","message":"Failed to parse response:","timestamp":"2024-11-21T16:38:35.350Z","url":"https://www.facebook.com/connect/ping?client_id=103295416394750&domain=app.trainingpeaks.com&origin=1&redirect_uri=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2Fbz-D0tzmBsw.js%3Fversion%3D42%23cb%3Dfe229f46fc7184%26domain%3Dapp.trainingpeaks.com%26origin%3Dhttps%253A%252F%252Fapp.trainingpeaks.com%252Ff2634bd4622d1cc%26relation%3Dparent&response_type=token%2Csigned_request%2Ccode&sdk=joey"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:41:26.188Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:41:44.317Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:41:48.264Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:41:57.242Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:41:57.931Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:42:27.954Z"}
+{"level":"info","message":"Navigating to login page...","timestamp":"2024-11-21T16:44:06.638Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:44:08.920Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:44:09.202Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:44:09.226Z"}
+{"level":"info","message":"Successfully retrieved auth token","timestamp":"2024-11-21T16:44:11.845Z"}
+{"level":"info","message":"Successfully retrieved user ID","timestamp":"2024-11-21T16:44:12.259Z"}
+{"level":"info","message":"Starting scheduler...","timestamp":"2024-11-21T16:44:19.169Z"}
+{"level":"info","message":"Running scheduled task...","timestamp":"2024-11-21T16:44:19.169Z"}
+{"level":"error","message":"Scheduled task failed: Failed to fetch workouts","stack":"Error: Failed to fetch workouts\n    at TrainingPeaksService.getWorkouts (/Users/paolo/work/newstuff/trainingpeaks/src/services/trainingpeaks.service.ts:28:13)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at Scheduler.scheduleNextRun (/Users/paolo/work/newstuff/trainingpeaks/src/utils/scheduler.ts:57:24)","timestamp":"2024-11-21T16:44:19.628Z"}
+{"level":"info","message":"Navigating to login page...","timestamp":"2024-11-21T16:45:06.000Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:45:08.550Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:45:08.626Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:45:08.645Z"}
+{"level":"info","message":"Successfully retrieved auth token","timestamp":"2024-11-21T16:45:11.282Z"}
+{"level":"info","message":"Successfully retrieved user ID","timestamp":"2024-11-21T16:45:11.680Z"}
+{"level":"info","message":"Starting scheduler...","timestamp":"2024-11-21T16:45:18.360Z"}
+{"level":"info","message":"Running scheduled task...","timestamp":"2024-11-21T16:45:18.360Z"}
+{"level":"error","message":"Scheduled task failed: Failed to fetch workouts","stack":"Error: Failed to fetch workouts\n    at TrainingPeaksService.getWorkouts (/Users/paolo/work/newstuff/trainingpeaks/src/services/trainingpeaks.service.ts:28:13)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at Scheduler.scheduleNextRun (/Users/paolo/work/newstuff/trainingpeaks/src/utils/scheduler.ts:57:24)","timestamp":"2024-11-21T16:45:18.859Z"}
+{"level":"info","message":"Navigating to login page...","timestamp":"2024-11-21T16:49:27.240Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:49:29.475Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:49:29.570Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:49:29.589Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-21T16:49:29.893Z"}
+{"level":"info","message":"Navigating to login page...","timestamp":"2024-11-21T16:55:18.521Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T16:55:20.805Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T16:55:20.925Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T16:55:20.948Z"}
+{"level":"info","message":"Successfully retrieved auth token","timestamp":"2024-11-21T16:55:23.509Z"}
+{"level":"info","message":"Successfully retrieved user ID","timestamp":"2024-11-21T16:55:23.893Z"}
+{"level":"info","message":"Starting scheduler...","timestamp":"2024-11-21T16:55:30.597Z"}
+{"level":"info","message":"Running scheduled task...","timestamp":"2024-11-21T16:55:30.597Z"}
+{"level":"info","message":"Found 2 workouts in date range","timestamp":"2024-11-21T16:55:31.032Z"}
+{"level":"info","message":"Workout undefined description: Remember to do prerun activation!\n10-15 minute warm up\n\n10 x 1 minute hills - RPE 7-8 - heart rate max 170, 2 minute jog rest\n\n10-15 minute cooldown","timestamp":"2024-11-21T16:55:31.033Z"}
+{"level":"info","message":"Navigating to login page...","timestamp":"2024-11-21T17:00:50.997Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T17:00:54.341Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T17:00:54.428Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T17:00:54.445Z"}
+{"level":"info","message":"Successfully retrieved auth token","timestamp":"2024-11-21T17:00:57.285Z"}
+{"level":"info","message":"Successfully retrieved user ID","timestamp":"2024-11-21T17:00:57.675Z"}
+{"level":"info","message":"Starting scheduler...","timestamp":"2024-11-21T17:01:04.299Z"}
+{"level":"info","message":"Running scheduled task...","timestamp":"2024-11-21T17:01:04.299Z"}
+{"level":"info","message":"Found 2 workouts in date range","timestamp":"2024-11-21T17:01:04.743Z"}
+{"level":"info","message":"Workout undefined description: Remember to do prerun activation!\n10-15 minute warm up\n\n10 x 1 minute hills - RPE 7-8 - heart rate max 170, 2 minute jog rest\n\n10-15 minute cooldown","timestamp":"2024-11-21T17:01:04.744Z"}
+{"level":"info","message":"Navigating to login page...","timestamp":"2024-11-21T17:05:15.376Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T17:05:17.806Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T17:05:17.896Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T17:05:17.920Z"}
+{"level":"info","message":"Successfully retrieved auth token","timestamp":"2024-11-21T17:05:20.455Z"}
+{"level":"info","message":"Successfully retrieved user ID","timestamp":"2024-11-21T17:05:20.876Z"}
+{"level":"info","message":"Starting scheduler...","timestamp":"2024-11-21T17:05:27.538Z"}
+{"level":"info","message":"Running scheduled task...","timestamp":"2024-11-21T17:05:27.538Z"}
+{"level":"info","message":"Found 2 workouts in date range","timestamp":"2024-11-21T17:05:27.972Z"}
+{"level":"info","message":"Workout undefined description: Remember to do prerun activation!\n10-15 minute warm up\n\n10 x 1 minute hills - RPE 7-8 - heart rate max 170, 2 minute jog rest\n\n10-15 minute cooldown","timestamp":"2024-11-21T17:05:27.972Z"}
+{"level":"info","message":"Navigating to login page...","timestamp":"2024-11-21T17:09:18.936Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T17:09:21.125Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T17:09:21.382Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T17:09:21.405Z"}
+{"level":"info","message":"Successfully retrieved auth token","timestamp":"2024-11-21T17:09:24.068Z"}
+{"level":"info","message":"Successfully retrieved user ID","timestamp":"2024-11-21T17:09:24.472Z"}
+{"level":"info","message":"Starting scheduler...","timestamp":"2024-11-21T17:09:31.135Z"}
+{"level":"info","message":"Running scheduled task...","timestamp":"2024-11-21T17:09:31.135Z"}
+{"level":"info","message":"Found 3 workouts in date range","timestamp":"2024-11-21T17:09:31.562Z"}
+{"level":"info","message":"Workout ID: 2890462956\nDate: 2024-11-27T00:00:00\nTitle: zone 2 long\nDescription: 2-4 Hours with heart rate max 130\nStructured: No","timestamp":"2024-11-21T17:09:31.562Z"}
+{"level":"info","message":"Workout ID: 2890466232\nDate: 2024-11-28T00:00:00\nTitle: Hills\nDescription: Remember to do prerun activation!\n10-15 minute warm up\n\n10 x 1 minute hills - RPE 7-8 - heart rate max 170, 2 minute jog rest\n\n10-15 minute cooldown\nStructured: No","timestamp":"2024-11-21T17:09:31.562Z"}
+{"level":"info","message":"Workout ID: 2890577961\nDate: 2024-11-29T00:00:00\nTitle: N/A\nDescription: Warm up (700)400 easy\n6 x 50 (25 drill, 25 free) with 20s rest\nfist closed x 2, L arm, R arm, scull, doggy paddle\n\n5 x 200 moderate with 20s rest\n1) free\n2) PB\n3) free\n4) PB\n5) PB + Paddles (if accessible)\n\n2 x 500 steady with 1 minute rest\n1) free\n2) PB\nStructured: No","timestamp":"2024-11-21T17:09:31.563Z"}
+{"level":"info","message":"Navigating to login page...","timestamp":"2024-11-21T17:09:53.644Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T17:09:56.456Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T17:09:56.519Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T17:09:56.537Z"}
+{"level":"info","message":"Successfully retrieved auth token","timestamp":"2024-11-21T17:09:58.695Z"}
+{"level":"info","message":"Successfully retrieved user ID","timestamp":"2024-11-21T17:09:59.089Z"}
+{"level":"info","message":"Starting scheduler...","timestamp":"2024-11-21T17:10:05.757Z"}
+{"level":"info","message":"Running scheduled task...","timestamp":"2024-11-21T17:10:05.757Z"}
+{"level":"info","message":"Found 3 workouts in date range","timestamp":"2024-11-21T17:10:06.309Z"}
+{"level":"info","message":"--------------------          \nWorkout ID: 2890462956\nDate: 2024-11-27T00:00:00\nTitle: zone 2 long\nDescription: 2-4 Hours with heart rate max 130\nStructured: No\n--------------------","timestamp":"2024-11-21T17:10:06.310Z"}
+{"level":"info","message":"--------------------          \nWorkout ID: 2890466232\nDate: 2024-11-28T00:00:00\nTitle: Hills\nDescription: Remember to do prerun activation!\n10-15 minute warm up\n\n10 x 1 minute hills - RPE 7-8 - heart rate max 170, 2 minute jog rest\n\n10-15 minute cooldown\nStructured: No\n--------------------","timestamp":"2024-11-21T17:10:06.310Z"}
+{"level":"info","message":"--------------------          \nWorkout ID: 2890577961\nDate: 2024-11-29T00:00:00\nTitle: N/A\nDescription: Warm up (700)400 easy\n6 x 50 (25 drill, 25 free) with 20s rest\nfist closed x 2, L arm, R arm, scull, doggy paddle\n\n5 x 200 moderate with 20s rest\n1) free\n2) PB\n3) free\n4) PB\n5) PB + Paddles (if accessible)\n\n2 x 500 steady with 1 minute rest\n1) free\n2) PB\nStructured: No\n--------------------","timestamp":"2024-11-21T17:10:06.310Z"}
+{"level":"info","message":"Navigating to login page...","timestamp":"2024-11-21T17:46:03.377Z"}
+{"level":"info","message":"Accepting cookies...","timestamp":"2024-11-21T17:46:05.537Z"}
+{"level":"info","message":"Entering credentials...","timestamp":"2024-11-21T17:46:05.885Z"}
+{"level":"info","message":"Submitting login form...","timestamp":"2024-11-21T17:46:05.909Z"}
+{"level":"info","message":"Successfully retrieved auth token","timestamp":"2024-11-21T17:46:08.446Z"}
+{"level":"info","message":"Successfully retrieved user ID","timestamp":"2024-11-21T17:46:08.823Z"}
+{"level":"info","message":"Starting scheduler...","timestamp":"2024-11-21T17:46:15.645Z"}
+{"level":"info","message":"Running scheduled task...","timestamp":"2024-11-21T17:46:15.645Z"}
+{"level":"info","message":"Found 3 workouts in date range","timestamp":"2024-11-21T17:46:16.070Z"}
+{"level":"info","message":"\n--------------------          \nWorkout ID: 2890462956\nType: 2\nDate: 2024-11-27T00:00:00\nTitle: zone 2 long\nDescription: 2-4 Hours with heart rate max 130\nStructured: No\n--------------------","timestamp":"2024-11-21T17:46:16.070Z"}
+{"level":"info","message":"\n--------------------          \nWorkout ID: 2890466232\nType: 3\nDate: 2024-11-28T00:00:00\nTitle: Hills\nDescription: Remember to do prerun activation!\n10-15 minute warm up\n\n10 x 1 minute hills - RPE 7-8 - heart rate max 170, 2 minute jog rest\n\n10-15 minute cooldown\nStructured: No\n--------------------","timestamp":"2024-11-21T17:46:16.070Z"}
+{"level":"info","message":"\n--------------------          \nWorkout ID: 2890577961\nType: 1\nDate: 2024-11-29T00:00:00\nTitle: N/A\nDescription: Warm up (700)400 easy\n6 x 50 (25 drill, 25 free) with 20s rest\nfist closed x 2, L arm, R arm, scull, doggy paddle\n\n5 x 200 moderate with 20s rest\n1) free\n2) PB\n3) free\n4) PB\n5) PB + Paddles (if accessible)\n\n2 x 500 steady with 1 minute rest\n1) free\n2) PB\nStructured: No\n--------------------","timestamp":"2024-11-21T17:46:16.070Z"}
