@@ -38,16 +38,27 @@ export class TrainingPeaksService {
     }
   }
 
-  async updateWorkout(userId: string, workoutId: string, structure: StructuredWorkout): Promise<Workout> {
+  async updateWorkout(userId: string, workoutId: string, workout: Workout): Promise<Workout> {
     try {
       const response = await axios.put<Workout>(
         `${this.baseUrl}/athletes/${userId}/workouts/${workoutId}`,
-        { structure },
+        workout,
         { headers: this.getHeaders() }
       );
       return response.data;
     } catch (error) {
-      throw new Error(`Failed to update workout: ${error}`);
+      if (axios.isAxiosError(error)) {
+        throw new Error(
+          `Failed to update workout:\n` +
+          `Status: ${error.response?.status}\n` +
+          `Message: ${error.message}\n` +
+          // `Response data: ${JSON.stringify(error.response?.data, null, 2)}\n` +
+          `Request URL: ${error.config?.url}\n` +
+          `Request method: ${error.config?.method}\n` +
+          `Request data: ${error.config?.data}`
+        );
+      }
+      throw error;
     }
   }
 } 

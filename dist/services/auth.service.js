@@ -1,16 +1,14 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthService = void 0;
 const logger_1 = require("../utils/logger");
-const puppeteer_1 = __importDefault(require("puppeteer"));
+const playwright_1 = require("playwright");
 class AuthService {
     constructor() {
-        this.token = null;
+        this.accessToken = null;
         this.tokenExpiry = null;
         this.refreshTimeout = null;
+        this.userId = null;
     }
     static getInstance() {
         if (!AuthService.instance) {
@@ -19,75 +17,65 @@ class AuthService {
         return AuthService.instance;
     }
     async login(username, password) {
-        let browser;
+        if (!username || !password) {
+            throw new Error('Username and password are required');
+        }
+        if (this.accessToken && this.userId && this.tokenExpiry && this.tokenExpiry > new Date()) {
+            logger_1.logger.info('Already authenticated with valid token, skipping login');
+            return;
+        }
+        const browser = await playwright_1.chromium.launch({
+            headless: false,
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
+        });
         try {
-            browser = await puppeteer_1.default.launch({
-                headless: true,
-                args: [
-                    '--no-sandbox',
-                    '--disable-setuid-sandbox',
-                    '--disable-dev-shm-usage',
-                    '--disable-gpu'
-                ],
-                defaultViewport: { width: 1920, height: 1080 }
-            });
             const page = await browser.newPage();
-            // Add better logging
-            page.on('console', msg => logger_1.logger.debug('Browser console:', msg.text()));
-            logger_1.logger.info('Navigating to TrainingPeaks login page...');
-            await page.goto('https://home.trainingpeaks.com/login', {
-                waitUntil: 'networkidle0',
-                timeout: 30000
-            });
-            logger_1.logger.info('Entering credentials...');
-            await page.type('#username', username);
-            await page.type('#password', password);
-            logger_1.logger.info('Submitting login form...');
-            await Promise.all([
-                page.click('#login-button'),
-                page.waitForNavigation({ waitUntil: 'networkidle0' })
-            ]);
-            // Wait for auth token to be present
-            logger_1.logger.info('Waiting for auth token...');
-            const token = await page.evaluate(() => {
-                return new Promise((resolve) => {
-                    let attempts = 0;
-                    const checkToken = () => {
-                        const token = localStorage.getItem('tp.auth.token');
-                        if (token) {
-                            resolve(token);
-                        }
-                        else if (attempts < 10) {
-                            attempts++;
-                            setTimeout(checkToken, 1000);
-                        }
-                        else {
-                            resolve('');
-                        }
-                    };
-                    checkToken();
-                });
-            });
-            if (!token) {
-                throw new Error('Failed to retrieve auth token');
+            page.on('console', msg => logger_1.logger.debug('Browser:', msg.text()));
+            this.setupAuthResponseListeners(page);
+            logger_1.logger.info('Navigating to login page...');
+            await page.goto('https://home.trainingpeaks.com/login', { waitUntil: 'networkidle' });
+            logger_1.logger.info('Accepting cookies...');
+            await page.waitForSelector('#onetrust-accept-btn-handler', { state: 'visible' });
+            await page.click('#onetrust-accept-btn-handler');
+            // Check for empty username or password
+            if (!username || !password) {
+                throw new Error('Username or password cannot be empty');
             }
-            this.token = token;
-            this.tokenExpiry = this.calculateTokenExpiry();
-            logger_1.logger.info('Successfully authenticated with TrainingPeaks');
+            logger_1.logger.info('Entering credentials...');
+            await page.waitForSelector('[data-cy="username"]', { state: 'visible' });
+            await page.fill('[data-cy="username"]', username);
+            await page.waitForSelector('[data-cy="password"]', { state: 'visible' });
+            await page.fill('[data-cy="password"]', password);
+            logger_1.logger.info('Submitting login form...');
+            await page.click('#btnSubmit');
+            // Wait for the page to load after submitting the login form
+            await page.waitForLoadState('networkidle');
+            // Check for error message indicating invalid credentials after navigation
+            const errorMessage = await page.waitForSelector('[data_cy="invalid_credentials_message"]', { state: 'visible', timeout: 5000 }).catch(() => null);
+            if (errorMessage) {
+                const errorText = await page.evaluate(el => el.textContent, errorMessage);
+                throw new Error(`Login failed: ${errorText}`);
+            }
+            // Check if the login was successful by verifying the new page URL or an element
+            const currentUrl = page.url();
+            if (!currentUrl.includes('https://app.trainingpeaks.com')) {
+                throw new Error('Login failed: did not navigate to the expected page');
+            }
+            // Wait for successful navigation
+            await page.waitForURL('https://app.trainingpeaks.com/**', { timeout: 30000 });
+            if (!this.accessToken || !this.userId) {
+                throw new Error('Failed to retrieve authentication data');
+            }
+            this.tokenExpiry = new Date(Date.now() + 23 * 60 * 60 * 1000);
+            this.setupTokenRefresh();
         }
         catch (error) {
-            logger_1.logger.error('Login failed:', error);
-            throw new Error(`Authentication failed: ${error.message}`);
+            logger_1.logger.error('Login failed:', error instanceof Error ? error.message : 'Unknown error');
+            throw new Error(`Authentication failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
         }
         finally {
-            if (browser) {
-                await browser.close();
-            }
+            await browser.close();
         }
-    }
-    calculateTokenExpiry() {
-        // Set expiry to 23 hours from now to refresh before actual expiration
-        return new Date(Date.now() + 23 * 60 * 60 * 1000);
     }
     setupTokenRefresh() {
         if (this.refreshTimeout) {
@@ -100,15 +88,76 @@ class AuthService {
                 this.setupTokenRefresh();
             }
             catch (error) {
-                logger_1.logger.error('Failed to refresh token:', error);
+                logger_1.logger.error('Token refresh failed:', error);
             }
         }, timeUntilRefresh);
     }
     getToken() {
-        if (!this.token || !this.tokenExpiry || this.tokenExpiry < new Date()) {
+        if (!this.accessToken || !this.tokenExpiry || this.tokenExpiry < new Date()) {
             throw new Error('Invalid or expired token');
         }
-        return this.token;
+        return this.accessToken;
+    }
+    getUserId() {
+        return this.userId;
+    }
+    setupAuthResponseListeners(page) {
+        page.on('response', async (response) => {
+            const url = response.url();
+            if (url.includes('/users/v3/token')) {
+                await this.handleTokenResponse(response);
+            }
+            else if (url.includes('/users/v3/user')) {
+                await this.handleUserResponse(response);
+            }
+        });
+    }
+    async handleTokenResponse(response) {
+        try {
+            if (!response.ok()) {
+                logger_1.logger.warn(`Token response failed with status ${response.status()}`);
+                return;
+            }
+            const json = await this.parseJsonResponse(response);
+            if (!json?.token?.access_token)
+                return;
+            this.accessToken = json.token.access_token;
+            logger_1.logger.info('Successfully retrieved auth token');
+        }
+        catch (error) {
+            logger_1.logger.error('Error processing token response:', error);
+        }
+    }
+    async handleUserResponse(response) {
+        try {
+            if (!response.ok()) {
+                logger_1.logger.warn(`User response failed with status ${response.status()}`);
+                return;
+            }
+            const json = await this.parseJsonResponse(response);
+            if (!json?.user.userId)
+                return;
+            this.userId = json.user.userId;
+            logger_1.logger.info('Successfully retrieved user ID');
+        }
+        catch (error) {
+            logger_1.logger.error('Error processing user response:', error);
+        }
+    }
+    async parseJsonResponse(response) {
+        try {
+            return await response.json();
+        }
+        catch (error) {
+            const text = await response.text().catch(() => '');
+            logger_1.logger.warn('Failed to parse response as JSON:', {
+                url: response.url(),
+                status: response.status(),
+                text: text.substring(0, 200),
+                error: error instanceof Error ? error.message : 'Unknown error'
+            });
+            return null;
+        }
     }
 }
 exports.AuthService = AuthService;

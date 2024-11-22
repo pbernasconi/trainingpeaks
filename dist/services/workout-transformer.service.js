@@ -6,11 +6,9 @@ class WorkoutTransformerService {
     constructor() {
         this.claudeService = new claude_service_1.ClaudeService();
     }
-    async transformWorkout(description) {
+    async transformWorkout(workout) {
         try {
-            const jsonString = await this.claudeService.transformWorkoutDescription(description);
-            const structure = JSON.parse(jsonString);
-            // Validate the structure matches our schema
+            const structure = await this.claudeService.transformWorkoutDescription(workout);
             this.validateWorkoutStructure(structure);
             return structure;
         }
@@ -28,6 +26,13 @@ class WorkoutTransformerService {
                 throw new Error('Missing required fields in workout step');
             }
         }
+    }
+    transform(description) {
+        // Implement your workout transformation logic here
+        // Return the structured workout format
+        return {
+        // Your transformed workout structure
+        };
     }
 }
 exports.WorkoutTransformerService = WorkoutTransformerService;

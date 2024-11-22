@@ -96,41 +96,42 @@ export interface Workout {
   personalRecordCount: number;
 
   // Additional Fields
-  structure: StructuredWorkout | null;
+  structure: StructuredWorkout | string | null;
   syncedTo: string | null;
   poolLengthOptionId: number | null;
 }
 
 
 export interface Length {
-  Unit: 'Second' | 'Meter' | 'Repetition';
-  Value: number;
+  unit: 'Second' | 'Meter' | 'Repetition';
+  value: number;
 }
 
 export interface IntensityTarget {
-  Unit: 'PercentOfFtp' | 'PercentOfMaxHr' | 'PercentOfThresholdHr' | 'PercentOfThresholdSpeed' | 'Rpe';
-  Value: number;
-  MinValue?: number;
-  MaxValue?: number;
+  unit: 'PercentOfFtp' | 'PercentOfMaxHr' | 'PercentOfThresholdHr' | 'PercentOfThresholdSpeed' | 'Rpe';
+  value: number;
+  minValue?: number;
+  maxValue?: number;
 }
 
 export interface CadenceTarget {
-  Unit: 'rpm';
-  MinValue?: number;
-  MaxValue?: number;
+  unit: 'rpm';
+  minValue?: number;
+  maxValue?: number;
 }
 
 export interface WorkoutStep {
-  IntensityClass: 'WarmUp' | 'CoolDown' | 'Active' | 'Rest';
-  Name?: string;
-  Length: Length;
-  Type: 'Step' | 'Repetition';
-  IntensityTarget: IntensityTarget;
-  CadenceTarget?: CadenceTarget;
-  OpenDuration?: boolean;
-  Steps?: WorkoutStep[];
+  intensityClass: 'WarmUp' | 'CoolDown' | 'Active' | 'Rest';
+  name?: string;
+  length: Length;
+  type: 'Step' | 'Repetition';
+  intensityTarget: IntensityTarget;
+  cadenceTarget?: CadenceTarget;
+  openDuration?: boolean;
+  steps?: WorkoutStep[];
+  notes?: string;
 }
 
 export interface StructuredWorkout {
-  Structure: WorkoutStep[];
+  structure: WorkoutStep[];
 } 

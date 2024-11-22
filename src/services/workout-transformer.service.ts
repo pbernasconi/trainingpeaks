@@ -1,5 +1,5 @@
 import { ClaudeService } from './claude.service';
-import { StructuredWorkout } from '../types/workout';
+import { StructuredWorkout, Workout } from '../types/workout';
 
 export class WorkoutTransformerService {
   private claudeService: ClaudeService;
@@ -8,14 +8,10 @@ export class WorkoutTransformerService {
     this.claudeService = new ClaudeService();
   }
 
-  async transformWorkout(description: string): Promise<StructuredWorkout> {
+  async transformWorkout(workout: Workout): Promise<StructuredWorkout> {
     try {
-      const jsonString = await this.claudeService.transformWorkoutDescription(description);
-      const structure = JSON.parse(jsonString);
-
-      // Validate the structure matches our schema
+      const structure = await this.claudeService.transformWorkoutDescription(workout);
       this.validateWorkoutStructure(structure);
-
       return structure;
     } catch (error: unknown) {
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';

@@ -3,17 +3,21 @@ import { logger } from './logger';
 import { TrainingPeaksService } from '../services/trainingpeaks.service';
 import { WorkoutTransformerService } from '../services/workout-transformer.service';
 import { AuthService } from '../services/auth.service';
+import { ClaudeService } from '../services/claude.service';
+import { Workout } from '../types/workout';
 
 export class Scheduler {
   private interval: NodeJS.Timeout | null = null;
   private trainingPeaksService: TrainingPeaksService;
   private workoutTransformer: WorkoutTransformerService;
   private authService: AuthService;
+  private claudeService: ClaudeService;
 
   constructor() {
     this.trainingPeaksService = new TrainingPeaksService();
     this.workoutTransformer = new WorkoutTransformerService();
     this.authService = AuthService.getInstance();
+    this.claudeService = new ClaudeService();
   }
 
   startScheduler(): void {
@@ -70,33 +74,32 @@ export class Scheduler {
       dateRange.start,
       dateRange.end
     );
-
     logger.info(`Found ${workouts.length} workouts in date range`);
 
     for (const workout of workouts) {
-      try {
-        this.logWorkoutDetails(workout);
+      await this.processWorkout(workout, userId);
+    }
+  }
 
-        // Only attempt to update workouts that have a description but no structure
-        if (workout.description && !workout.structure) {
-          logger.info(`Updating workout ${workout.workoutId} with structure...`);
-          const structuredWorkout = this.workoutTransformer.transform(workout.description);
-          await this.trainingPeaksService.updateWorkout(
-            userId,
-            workout.workoutId.toString(),
-            structuredWorkout
-          );
-          logger.info(`Successfully updated workout ${workout.workoutId}`);
-        }
-      } catch (error: any) {
-        logger.error(`Failed to process workout ${workout.workoutId}:`, error);
+  private async processWorkout(workout: Workout, userId: string): Promise<void> {
+    try {
+      this.logWorkoutDetails(workout);
+      // Only attempt to update workouts that have a description but no structure
+      if (workout.description && !workout.structure) {
+        logger.info(`Updating workout ${workout.workoutId} with structure...`);
+        const structure = await this.claudeService.transformWorkoutDescription(workout);
+        console.log(structure);
+        const updatedWorkout = { ...workout, structure: JSON.stringify(structure) };
+        await this.trainingPeaksService.updateWorkout(userId, workout.workoutId.toString(), updatedWorkout);
+        logger.info(`Successfully updated workout ${workout.workoutId}`);
       }
+    } catch (error: any) {
+      logger.error(`Failed to process workout ${workout.workoutId}:`, error);
     }
   }
 
   private logWorkoutDetails(workout: any): void {
-    logger.info(`
---------------------          
+    logger.info(`--------------------
 Workout ID: ${workout.workoutId}
 Type: ${workout.workoutTypeValueId}
 Date: ${workout.workoutDay}
