@@ -1233,3 +1233,7 @@
 {"level":"info","message":"--------------------\nWorkout ID: 2897051395\nType: 3\nDate: 2024-11-30T00:00:00\nTitle: 30-45 minutes Z1/2 + strides\nDescription: If possible, add 4 x 20s hard uphill ~ 1 mile pace (not sprint), 90 s jog down recovery\nStructured: No\n--------------------","timestamp":"2024-11-27T22:21:45.922Z"}
 {"level":"info","message":"Processing workout 2897051395...","timestamp":"2024-11-27T22:21:45.922Z"}
 {"level":"info","message":"Successfully processed workout 2897051395","timestamp":"2024-11-27T22:21:51.775Z"}
+{"level":"info","message":"Starting workout processing...","timestamp":"2024-11-27T22:23:32.138Z"}
+{"level":"info","message":"Authenticating...","timestamp":"2024-11-27T22:23:32.140Z"}
+{"level":"info","message":"Navigating to login page...","timestamp":"2024-11-27T22:23:32.292Z"}
+{"level":"error","message":"Login failed:","timestamp":"2024-11-27T22:23:34.185Z"}

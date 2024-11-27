@@ -1,20 +1,16 @@
-import { CONFIG } from '../config/constants';
 import { logger } from './logger';
 import { TrainingPeaksService } from '../services/trainingpeaks.service';
-import { WorkoutTransformerService } from '../services/workout-transformer.service';
 import { AuthService } from '../services/auth.service';
 import { ClaudeService } from '../services/claude.service';
 import { Workout } from '../types/workout';
 
 export class WorkoutProcessor {
   private trainingPeaksService: TrainingPeaksService;
-  private workoutTransformer: WorkoutTransformerService;
   private authService: AuthService;
   private claudeService: ClaudeService;
 
   constructor() {
     this.trainingPeaksService = new TrainingPeaksService();
-    this.workoutTransformer = new WorkoutTransformerService();
     this.authService = AuthService.getInstance();
     this.claudeService = new ClaudeService();
   }

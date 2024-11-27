@@ -3,13 +3,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.WorkoutProcessor = void 0;
 const logger_1 = require("./logger");
 const trainingpeaks_service_1 = require("../services/trainingpeaks.service");
-const workout_transformer_service_1 = require("../services/workout-transformer.service");
 const auth_service_1 = require("../services/auth.service");
 const claude_service_1 = require("../services/claude.service");
 class WorkoutProcessor {
     constructor() {
         this.trainingPeaksService = new trainingpeaks_service_1.TrainingPeaksService();
-        this.workoutTransformer = new workout_transformer_service_1.WorkoutTransformerService();
         this.authService = auth_service_1.AuthService.getInstance();
         this.claudeService = new claude_service_1.ClaudeService();
     }
