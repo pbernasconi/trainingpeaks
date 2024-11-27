@@ -6,8 +6,7 @@ import { AuthService } from '../services/auth.service';
 import { ClaudeService } from '../services/claude.service';
 import { Workout } from '../types/workout';
 
-export class Scheduler {
-  private interval: NodeJS.Timeout | null = null;
+export class WorkoutProcessor {
   private trainingPeaksService: TrainingPeaksService;
   private workoutTransformer: WorkoutTransformerService;
   private authService: AuthService;
@@ -20,29 +19,16 @@ export class Scheduler {
     this.claudeService = new ClaudeService();
   }
 
-  startScheduler(): void {
-    logger.info('Starting scheduler...');
-    this.scheduleNextRun();
-    this.interval = setInterval(() => {
-      this.scheduleNextRun();
-    }, CONFIG.POLL_INTERVAL);
-  }
-
-  stopScheduler(): void {
-    if (this.interval) {
-      clearInterval(this.interval);
-      this.interval = null;
-    }
-  }
-
-  private async scheduleNextRun(): Promise<void> {
+  async processAllWorkouts(): Promise<void> {
     try {
-      logger.info('Running scheduled task...');
+      logger.info('Starting workout processing...');
       await this.ensureAuthentication();
       const dateRange = this.calculateDateRange();
       await this.processWorkouts(dateRange);
+      logger.info('Finished processing workouts');
     } catch (error: any) {
-      logger.error('Scheduled task failed:', error);
+      logger.error('Processing failed:', error);
+      throw error;
     }
   }
 
@@ -50,7 +36,7 @@ export class Scheduler {
     try {
       this.authService.getToken();
     } catch (error) {
-      logger.info('Authentication token invalid or expired, attempting to login...');
+      logger.info('Authenticating...');
       await this.authService.login(process.env.TP_USERNAME!, process.env.TP_PASSWORD!);
     }
 
@@ -84,14 +70,12 @@ export class Scheduler {
   private async processWorkout(workout: Workout, userId: string): Promise<void> {
     try {
       this.logWorkoutDetails(workout);
-      // Only attempt to update workouts that have a description but no structure
       if (workout.description && !workout.structure) {
-        logger.info(`Updating workout ${workout.workoutId} with structure...`);
+        logger.info(`Processing workout ${workout.workoutId}...`);
         const structure = await this.claudeService.transformWorkoutDescription(workout);
-        console.log(structure);
         const updatedWorkout = { ...workout, structure: JSON.stringify(structure) };
         await this.trainingPeaksService.updateWorkout(userId, workout.workoutId.toString(), updatedWorkout);
-        logger.info(`Successfully updated workout ${workout.workoutId}`);
+        logger.info(`Successfully processed workout ${workout.workoutId}`);
       }
     } catch (error: any) {
       logger.error(`Failed to process workout ${workout.workoutId}:`, error);

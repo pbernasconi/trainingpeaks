@@ -94,11 +94,11 @@ export interface Workout {
   rpe: number | null;
   feeling: number | null;
   personalRecordCount: number;
+  syncedTo: string | null;
+  poolLengthOptionId: number | null;
 
   // Additional Fields
   structure: StructuredWorkout | string | null;
-  syncedTo: string | null;
-  poolLengthOptionId: number | null;
 }
 
 

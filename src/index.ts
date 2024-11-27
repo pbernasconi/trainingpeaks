@@ -1,21 +1,16 @@
 import dotenv from 'dotenv';
-import { Scheduler } from './utils/scheduler';
-import { AuthService } from './services/auth.service';
+import { WorkoutProcessor } from './utils/scheduler';
 
 // Load environment variables from .env file
 dotenv.config();
 
 async function main() {
   try {
-    // Initialize authentication
-    const authService = AuthService.getInstance();
-    await authService.login(process.env.TP_USERNAME!, process.env.TP_PASSWORD!);
-
-    // Start the scheduler
-    const scheduler = new Scheduler();
-    scheduler.startScheduler();
+    const processor = new WorkoutProcessor();
+    await processor.processAllWorkouts();
+    process.exit(0);
   } catch (error) {
-    console.error('Failed to start service:', error);
+    console.error('Failed to process workouts:', error);
     process.exit(1);
   }
 }

@@ -25,7 +25,7 @@ class AuthService {
             return;
         }
         const browser = await playwright_1.chromium.launch({
-            headless: false,
+            headless: true,
             args: ['--no-sandbox', '--disable-setuid-sandbox']
         });
         try {

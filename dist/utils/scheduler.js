@@ -1,42 +1,29 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Scheduler = void 0;
-const constants_1 = require("../config/constants");
+exports.WorkoutProcessor = void 0;
 const logger_1 = require("./logger");
 const trainingpeaks_service_1 = require("../services/trainingpeaks.service");
 const workout_transformer_service_1 = require("../services/workout-transformer.service");
 const auth_service_1 = require("../services/auth.service");
 const claude_service_1 = require("../services/claude.service");
-class Scheduler {
+class WorkoutProcessor {
     constructor() {
-        this.interval = null;
         this.trainingPeaksService = new trainingpeaks_service_1.TrainingPeaksService();
         this.workoutTransformer = new workout_transformer_service_1.WorkoutTransformerService();
         this.authService = auth_service_1.AuthService.getInstance();
         this.claudeService = new claude_service_1.ClaudeService();
     }
-    startScheduler() {
-        logger_1.logger.info('Starting scheduler...');
-        this.scheduleNextRun();
-        this.interval = setInterval(() => {
-            this.scheduleNextRun();
-        }, constants_1.CONFIG.POLL_INTERVAL);
-    }
-    stopScheduler() {
-        if (this.interval) {
-            clearInterval(this.interval);
-            this.interval = null;
-        }
-    }
-    async scheduleNextRun() {
+    async processAllWorkouts() {
         try {
-            logger_1.logger.info('Running scheduled task...');
+            logger_1.logger.info('Starting workout processing...');
             await this.ensureAuthentication();
             const dateRange = this.calculateDateRange();
             await this.processWorkouts(dateRange);
+            logger_1.logger.info('Finished processing workouts');
         }
         catch (error) {
-            logger_1.logger.error('Scheduled task failed:', error);
+            logger_1.logger.error('Processing failed:', error);
+            throw error;
         }
     }
     async ensureAuthentication() {
@@ -44,7 +31,7 @@ class Scheduler {
             this.authService.getToken();
         }
         catch (error) {
-            logger_1.logger.info('Authentication token invalid or expired, attempting to login...');
+            logger_1.logger.info('Authenticating...');
             await this.authService.login(process.env.TP_USERNAME, process.env.TP_PASSWORD);
         }
         if (!this.authService.getUserId()) {
@@ -69,14 +56,12 @@ class Scheduler {
     async processWorkout(workout, userId) {
         try {
             this.logWorkoutDetails(workout);
-            // Only attempt to update workouts that have a description but no structure
             if (workout.description && !workout.structure) {
-                logger_1.logger.info(`Updating workout ${workout.workoutId} with structure...`);
+                logger_1.logger.info(`Processing workout ${workout.workoutId}...`);
                 const structure = await this.claudeService.transformWorkoutDescription(workout);
-                console.log(structure);
                 const updatedWorkout = { ...workout, structure: JSON.stringify(structure) };
                 await this.trainingPeaksService.updateWorkout(userId, workout.workoutId.toString(), updatedWorkout);
-                logger_1.logger.info(`Successfully updated workout ${workout.workoutId}`);
+                logger_1.logger.info(`Successfully processed workout ${workout.workoutId}`);
             }
         }
         catch (error) {
@@ -99,4 +84,4 @@ Structured: ${workout.structure ? 'Yes' : 'No'}
         return result;
     }
 }
-exports.Scheduler = Scheduler;
+exports.WorkoutProcessor = WorkoutProcessor;
