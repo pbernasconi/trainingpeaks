@@ -3,7 +3,7 @@ export interface Workout {
   workoutId: number;
   athleteId: number;
   title: string;
-  workoutTypeValueId: number;
+  workoutTypeValueId: WorkoutTypeValueId;
   code: string | null;
 
   // Timing
@@ -134,4 +134,11 @@ export interface WorkoutStep {
 
 export interface StructuredWorkout {
   structure: WorkoutStep[];
-} 
+}
+
+export enum WorkoutTypeValueId {
+  Swim = 1,
+  Bike = 2,
+  Run = 3,
+  Strength = 9,
+}

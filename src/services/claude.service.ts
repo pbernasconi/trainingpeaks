@@ -1,5 +1,7 @@
 import { Anthropic } from '@anthropic-ai/sdk';
-import { Workout, StructuredWorkout } from '../types/workout';
+import { Workout, StructuredWorkout, WorkoutTypeValueId } from '../types/workout';
+import { UserSettings, ZoneCalculator, HeartRateZone } from '../types/user';
+import { logger } from '../utils/logger';
 
 export class ClaudeService {
   private client: Anthropic;
@@ -13,13 +15,13 @@ export class ClaudeService {
     });
   }
 
-  async processWorkout(workout: Workout): Promise<Workout | null> {
+  async processWorkout(workout: Workout, userSettings: UserSettings): Promise<Workout | null> {
     if (!workout.description || workout.structure || workout.description === null) {
       return null;
     }
 
     try {
-      const structure = await this.transformWorkoutDescription(workout);
+      const structure = await this.transformWorkoutDescription(workout, userSettings);
       return { ...workout, structure };
     } catch (error: unknown) {
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
@@ -27,14 +29,61 @@ export class ClaudeService {
     }
   }
 
-  public async transformWorkoutDescription(workout: Workout): Promise<StructuredWorkout> {
-    const prompt = this.buildPrompt(workout.description, workout.workoutTypeValueId);
+  mapWorkoutTypeValueId(workoutTypeValueId: WorkoutTypeValueId): string {
+    switch (workoutTypeValueId) {
+      case WorkoutTypeValueId.Run:
+        return 'run';
+      case WorkoutTypeValueId.Bike:
+        return 'bike';
+      case WorkoutTypeValueId.Swim:
+        return 'swim';
+      case WorkoutTypeValueId.Strength:
+        return 'strength';
+      default:
+        return 'other';
+    }
+  }
+
+  convertTotalTimePlannedToSeconds(totalTimePlanned: number | null): number | null {
+    return totalTimePlanned ? totalTimePlanned * 60 * 60 : null;
+  }
+
+  mapHeartRateZones(heartRateZones: ZoneCalculator[], workoutTypeId: number): string {
+    const zone = heartRateZones.find(zone => zone.workoutTypeId === workoutTypeId);
+    return JSON.stringify(zone?.zones);
+  }
+
+  mapHRZonesToThreshold(heartRateZones: ZoneCalculator[], workoutTypeId: number): any {
+    const zone = heartRateZones.find(zone => zone.workoutTypeId === workoutTypeId);
+    const threshold = zone?.threshold;
+    if (!threshold) return null;
+    const calculateZone = (zone: HeartRateZone | undefined) => ({
+      minimum: zone?.minimum ? Number((zone.minimum / threshold * 100).toFixed(2)) : null,
+      maximum: zone?.maximum ? Number((zone.maximum / threshold * 100).toFixed(2)) : null
+    });
+
+    return {
+      'Zone 1: Recovery': calculateZone(zone.zones.find(z => z.label === 'Zone 1: Recovery')),
+      'Zone 2: Aerobic': calculateZone(zone.zones.find(z => z.label === 'Zone 2: Aerobic')),
+      'Zone 3: Tempo': calculateZone(zone.zones.find(z => z.label === 'Zone 3: Tempo')),
+      'Zone 4: SubThreshold': calculateZone(zone.zones.find(z => z.label === 'Zone 4: SubThreshold')),
+      'Zone 5A: SuperThreshold': calculateZone(zone.zones.find(z => z.label === 'Zone 5A: SuperThreshold')),
+      'Zone 5B: Aerobic Capacity': calculateZone(zone.zones.find(z => z.label === 'Zone 5B: Aerobic Capacity')),
+      'Zone 5C: Anaerobic Capacity': calculateZone(zone.zones.find(z => z.label === 'Zone 5C: Anaerobic Capacity'))
+    };
+  }
+
+  public async transformWorkoutDescription(workout: Workout, userSettings: UserSettings): Promise<StructuredWorkout> {
+    const prompt = this.buildPrompt(workout, userSettings);
 
     const response = await this.client.messages.create({
       model: 'claude-3-5-sonnet-20241022',
       temperature: 0,
       max_tokens: 8192,
-      system: "You are a professional triathlon coach who specializes in structuring workouts. You only respond with valid JSON that matches the specified schema. Never include explanations or additional text.",
+      system: `
+        You are a professional triathlon coach who specializes in structuring workouts. 
+        You only respond with valid JSON that matches the specified schema. 
+        Never include explanations or additional text`,
       messages: [
         {
           role: 'user',
@@ -42,11 +91,14 @@ export class ClaudeService {
         }
       ]
     });
-
+    logger.info(`Response: ${response.content[0].text}`);
     return JSON.parse(response.content[0].text) as StructuredWorkout;
   }
 
-  private buildPrompt(description: string | null, workoutType: number): string {
+  private buildPrompt(workout: Workout, userSettings: UserSettings): string {
+    const { description, title, totalTimePlanned, workoutTypeValueId } = workout;
+    const { heartRateZones } = userSettings;
+    logger.info(`Heart Rate Threshold zones: ${JSON.stringify(this.mapHRZonesToThreshold(heartRateZones, workoutTypeValueId))}`);
     return `
       Transform this workout description into a structured workout format. Return a valid JSON object with a "structure" array containing workout steps.
 
@@ -186,8 +238,8 @@ export class ClaudeService {
                 },
                 "targets": [
                   {
-                    "minValue": 70,
-                    "maxValue": 80
+                    "minValue": 0,
+                    "maxValue": 83
                   }
                 ],
                 "name": "Warm up",
@@ -236,8 +288,8 @@ export class ClaudeService {
                 },
                 "targets": [
                   {
-                    "minValue": 70,
-                    "maxValue": 80
+                    "minValue": 84,
+                    "maxValue": 88
                   }
                 ],
                 "name": "Cool Down",
@@ -260,8 +312,26 @@ export class ClaudeService {
          - Heart rate zones (percentOfThresholdHr)
          - Power zones (percentOfFtp)
          - RPE (integers 1-10)
-      5. When using minValue/maxValue, value must be the exact midpoint
-      6. Return only valid JSON matching this exact schema
+      5. Return only valid JSON matching this exact schema
+      6. Find the Zone that best corresponds within these options:
+        - Zone 1: Recovery
+        - Zone 2: Aerobic
+        - Zone 3: Tempo
+        - Zone 4: SubThreshold
+        - Zone 5A: SuperThreshold
+        - Zone 5B: Aerobic Capacity
+        - Zone 5C: Anaerobic Capacity
+      7. To calculate each step's targets 'minValue' and 'maxValue', use the athlete's exact Heart Rate Threshold Zones that map to the Zone 1/2/3/4/5a/5b/5c:
+         - Use the exact decimal values provided in the Heart Rate Threshold Zones without rounding
+         - Maintain full numerical precision (do not round or simplify percentages)
+         - Example: if Zone 2 is {minimum: 84.48, maximum: 89.08}, use these exact values
+         - Never approximate or round these values to nearby whole numbers
+
+      Edge-case handling:
+      - If the Workout Planned Time is available, use that as the primary length metric, otherwise use the maximum value from the Workout Title as the primary length metric, otherwise use the Workout Description length where available
+      - openDuration should be false if there is a set duration
+      - For the root 'length', generally prefer 'repetition' over 'step', where a repetition is a single step
+      - When there is a recommendation for multiple zones in the Title or Description (eg: X minutes Zone 1/2), use the higher zone (eg: Zone 2)
 
       Optional fields for any step:
       - "name": descriptive name
@@ -269,9 +339,14 @@ export class ClaudeService {
       - "openDuration": boolean
       - "cadenceTarget": { "unit": "rpm", "minValue": number, "maxValue": number }
 
-      Workout Type ID: ${workoutType}
-      Workout description:
+      Workout Type: ${this.mapWorkoutTypeValueId(workoutTypeValueId)}
+      Workout Type ID: ${workoutTypeValueId}
+      Workout Title: ${title}
+      Workout Planned Time (in seconds): ${this.convertTotalTimePlannedToSeconds(totalTimePlanned)}
+      Workout Description:
       ${description}
+
+      Heart Rate Threshold Zones: ${this.mapHRZonesToThreshold(heartRateZones, workoutTypeValueId)}
     `;
   }
 } 

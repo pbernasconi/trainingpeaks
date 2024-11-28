@@ -3,6 +3,7 @@ import { TrainingPeaksService } from '../services/trainingpeaks.service';
 import { AuthService } from '../services/auth.service';
 import { ClaudeService } from '../services/claude.service';
 import { Workout } from '../types/workout';
+import { UserSettings } from '../types/user';
 
 export class WorkoutProcessor {
   private trainingPeaksService: TrainingPeaksService;
@@ -44,13 +45,14 @@ export class WorkoutProcessor {
   private calculateDateRange(): { start: Date; end: Date } {
     const today = new Date();
     return {
-      start: this.addDays(today, -14),
-      end: this.addDays(today, 14)
+      start: today,
+      end: this.addDays(today, 7)
     };
   }
 
   private async processWorkouts(dateRange: { start: Date; end: Date }): Promise<void> {
     const userId = this.authService.getUserId()!;
+    const userSettings = await this.trainingPeaksService.getUserSettings(userId);
     const workouts = await this.trainingPeaksService.getWorkouts(
       userId,
       dateRange.start,
@@ -59,34 +61,42 @@ export class WorkoutProcessor {
     logger.info(`Found ${workouts.length} workouts in date range`);
 
     for (const workout of workouts) {
-      await this.processWorkout(workout, userId);
+      await this.processWorkout(workout, userId, userSettings);
     }
   }
 
-  private async processWorkout(workout: Workout, userId: string): Promise<void> {
+  private async processWorkout(workout: Workout, userId: string, userSettings: UserSettings): Promise<void> {
     try {
       this.logWorkoutDetails(workout);
-      if (workout.description && !workout.structure) {
-        logger.info(`Processing workout ${workout.workoutId}...`);
-        const structure = await this.claudeService.transformWorkoutDescription(workout);
-        const updatedWorkout = { ...workout, structure: JSON.stringify(structure) };
-        await this.trainingPeaksService.updateWorkout(userId, workout.workoutId.toString(), updatedWorkout);
-        logger.info(`Successfully processed workout ${workout.workoutId}`);
+      if (![1, 2, 3].includes(workout.workoutTypeValueId)) {
+        logger.info(`Skipping workout that is not Swim, Bike or Run ${workout.workoutId}`);
+        return;
       }
+      if (workout.totalTime != null) {
+        logger.info(`Skipping completed workout ${workout.workoutId}`);
+        return;
+      }
+      const structure = await this.claudeService.transformWorkoutDescription(workout, userSettings);
+      const updatedWorkout = { ...workout, structure: JSON.stringify(structure) };
+      await this.trainingPeaksService.updateWorkout(userId, workout.workoutId.toString(), updatedWorkout);
+      logger.info(`Successfully processed workout ${workout.workoutId}`);
+
     } catch (error: any) {
       logger.error(`Failed to process workout ${workout.workoutId}:`, error);
     }
   }
 
   private logWorkoutDetails(workout: any): void {
-    logger.info(`--------------------
+    logger.info(`
+--------------------
 Workout ID: ${workout.workoutId}
 Type: ${workout.workoutTypeValueId}
 Date: ${workout.workoutDay}
 Title: ${workout.title || 'N/A'}
 Description: ${workout.description || 'N/A'}
 Structured: ${workout.structure ? 'Yes' : 'No'}
---------------------`);
+--------------------
+`);
   }
 
   private addDays(date: Date, days: number): Date {

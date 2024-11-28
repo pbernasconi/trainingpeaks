@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { AuthService } from './auth.service';
 import { Workout, StructuredWorkout } from '../types/workout';
+import { UserSettings } from '../types/user';
 
 export class TrainingPeaksService {
   private authService: AuthService;
@@ -52,13 +53,24 @@ export class TrainingPeaksService {
           `Failed to update workout:\n` +
           `Status: ${error.response?.status}\n` +
           `Message: ${error.message}\n` +
-          // `Response data: ${JSON.stringify(error.response?.data, null, 2)}\n` +
           `Request URL: ${error.config?.url}\n` +
           `Request method: ${error.config?.method}\n` +
           `Request data: ${error.config?.data}`
         );
       }
       throw error;
+    }
+  }
+
+  async getUserSettings(userId: string): Promise<UserSettings> {
+    try {
+      const response = await axios.get(
+        `${this.baseUrl.replace('v6', 'v1')}/athletes/${userId}/settings`,
+        { headers: this.getHeaders() }
+      );
+      return response.data;
+    } catch (error) {
+      throw new Error('Failed to fetch user settings: ' + error);
     }
   }
 } 
