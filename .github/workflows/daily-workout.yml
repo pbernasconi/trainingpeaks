@@ -25,4 +25,4 @@ jobs:
         run: npm ci
 
       - name: Run workout processor
-        run: node dist/scripts/process-workouts.js
+        run: node dist/index.js

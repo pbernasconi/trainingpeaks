@@ -1,6 +1,8 @@
-
 import { logger } from '../utils/logger';
-import { chromium, Browser, Page, Response } from 'playwright';
+import { chromium, Browser, Page, Response } from 'playwright-core';
+
+const BROWSERBASE_URL = 'wss://connect.browserbase.com';
+const BROWSERBASE_API_KEY = process.env.BROWSERBASE_API_KEY;
 
 export class AuthService {
   private static instance: AuthService;
@@ -28,13 +30,16 @@ export class AuthService {
       return;
     }
 
-    const browser = await chromium.launch({
-      headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
-    });
+    if (!BROWSERBASE_API_KEY) {
+      throw new Error('BROWSERBASE_API_KEY environment variable is required');
+    }
+
+    const browser = await chromium.connectOverCDP(`wss://connect.browserbase.com?apiKey=bb_live_p2I4i7U71LqokhO-OAj1NJmgz4k`
+    );
 
     try {
-      const page = await browser.newPage();
+      const defaultContext = browser.contexts()[0];
+      const page = defaultContext.pages()[0];
       page.on('console', msg => logger.debug('Browser:', msg.text()));
       this.setupAuthResponseListeners(page);
 

@@ -2,7 +2,7 @@ import { logger } from './logger';
 import { TrainingPeaksService } from '../services/trainingpeaks.service';
 import { AuthService } from '../services/auth.service';
 import { ClaudeService } from '../services/claude.service';
-import { Workout } from '../types/workout';
+import { Workout, WorkoutTypeValueId } from '../types/workout';
 import { UserSettings } from '../types/user';
 
 export class WorkoutProcessor {
@@ -68,12 +68,15 @@ export class WorkoutProcessor {
   private async processWorkout(workout: Workout, userId: string, userSettings: UserSettings): Promise<void> {
     try {
       this.logWorkoutDetails(workout);
-      if (![1, 2, 3].includes(workout.workoutTypeValueId)) {
-        logger.info(`Skipping workout that is not Swim, Bike or Run ${workout.workoutId}`);
+      if (workout.workoutTypeValueId !== WorkoutTypeValueId.Bike &&
+        workout.workoutTypeValueId !== WorkoutTypeValueId.Run) {
+        logger.info(`Skipping workout that is not Bike or Run ${workout.workoutId}`);
         return;
-      }
-      if (workout.totalTime != null) {
+      } else if (workout.totalTime != null) {
         logger.info(`Skipping completed workout ${workout.workoutId}`);
+        return;
+      } else if (workout.structure) {
+        logger.info(`Skipping workout that already has structure ${workout.workoutId}`);
         return;
       }
       const structure = await this.claudeService.transformWorkoutDescription(workout, userSettings);
