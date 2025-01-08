@@ -30,5 +30,5 @@ error.log
 combined.log
 
 # Testing
-coverage/ 
-node_modules
+coverage/
+dist/
