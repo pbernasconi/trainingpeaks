@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: workout-processor
-    runtime: node
-    buildCommand: npm ci && npm run build
-    startCommand: node dist/scripts/process-workouts.js
-    envVars:
-      - key: ANTHROPIC_API_KEY
-        sync: false
