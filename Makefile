@@ -17,12 +17,12 @@ install:
 
 .PHONY: build
 build: clean
-	@$(TSC)
+	@npm run build
 
 
-.PHONY: run
-run:
-	@$(NODE) dist/index.js
+.PHONY: start
+start:
+	@npm run start
 
 
 .PHONY: clean

@@ -1,7 +1,7 @@
 [build]
 builder = "NIXPACKS"
-buildCommand = "make install"
+buildCommand = "npm run build"
 
 [deploy]
-startCommand = "make run"
+startCommand = "npm run start"
 restartPolicyType = "ON_FAILURE" 
